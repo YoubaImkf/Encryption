@@ -10,7 +10,7 @@ Console.WriteLine("Hello, World!");
 
 
 //string filePath = @"C:\Users\...\Desktop\DataPackage\Mp3\CA6e19a4f8939991e98be37b023503ad1f.mp3";
-string filePath = @"C:\Users\...\Desktop\DataPackage\Mp3\MicrosoftActivisionPA.mp3";
+string filePath = @"C:\Users\youba.imakhlaf\Desktop\DataPackage\Mp3\MicrosoftActivisionPA.mp3";
 string fileName = Path.GetFileName(filePath);
 
 #region ---  AES Encrypt ---
@@ -87,7 +87,7 @@ Console.WriteLine($"Encrypt(asymetric) - Execution Time: {watch4.ElapsedMillisec
 #endregion
 
 
-#region Aes/RSA Encrypt //~300ms
+#region Aes/RSA Encrypt //~289ms
 /*var watch1 = new System.Diagnostics.Stopwatch();
 watch1.Start();
 
@@ -98,15 +98,15 @@ byte[] fileBytes = File.ReadAllBytes(filePath);
 byte[] encryptedBytes = AesRsaEncrypt.EncryptDataUsingAes(fileBytes);
 
 // Write the encrypted data to a new file
-string encryptedFilePath = $@"C:\Users\...\Desktop\DataPackage\Mp3\3Encrypt-AES_RSA\AES-RSA_encrypted_file-{fileName}.enc";
+string encryptedFilePath = $@"C:\Users\youba.imakhlaf\Desktop\DataPackage\Mp3\3Encrypt-AES_RSA\AES-RSA_encrypted_file-{fileName}.enc";
 File.WriteAllBytes(encryptedFilePath, encryptedBytes);
 
 watch1.Stop();
 Console.WriteLine($"Encrypt - Execution Time: {watch1.ElapsedMilliseconds} ms");*/
 #endregion
 
-#region Aes/RSA Decrypt //~300ms
-var encryptedFilePath = @"C:\Users\...\Desktop\DataPackage\Mp3\3Encrypt-AES_RSA\AES-RSA_encrypted_file-MicrosoftActivisionPA.mp3.enc";
+#region Aes/RSA Decrypt //~271,5ms
+var encryptedFilePath = @"C:\Users\youba.imakhlaf\Desktop\DataPackage\Mp3\3Encrypt-AES_RSA\AES-RSA_encrypted_file-MicrosoftActivisionPA.mp3.enc";
 
 var watch2 = new System.Diagnostics.Stopwatch();
 watch2.Start();
@@ -118,7 +118,7 @@ byte[] encryptedFileBytes = File.ReadAllBytes(encryptedFilePath);
 byte[] decryptedBytes = AesRsaEncrypt.DecryptDataUsingAes(encryptedFileBytes);
 
 // Write the decrypted data to a new file
-string decryptedFilePath = $@"C:\Users\...\Desktop\DataPackage\Mp3\3Decrypt-AES_RSA\AES-RSA_decrypted_file-{fileName}.mp3";
+string decryptedFilePath = $@"C:\Users\youba.imakhlaf\Desktop\DataPackage\Mp3\3Decrypt-AES_RSA\AES-RSA_decrypted_file-{fileName}.mp3";
 File.WriteAllBytes(decryptedFilePath, decryptedBytes);
 
 watch2.Stop();
